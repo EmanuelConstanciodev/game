@@ -31,6 +31,9 @@ scene("main", () => {
 
 	const JUMP_FORCE = 280;
 
+	mouseClick (() => {
+		birdy.jump(JUMP_FORCE);
+	} )
 	keyPress("space", () => {
 		birdy.jump(JUMP_FORCE);
 	});
@@ -108,6 +111,9 @@ scene("gameover", (score) => {
 	keyPress("space", () => {
 		go("main");
 	});
+	mouseClick (() => {
+		go("main");
+	} )
 
 });
 
